@@ -1,0 +1,271 @@
+body {
+  padding: 0 10% 4% 10%;
+  font-family: Rubik, Arial, sans-serif;
+}
+a:link {
+  font-weight: bold;
+}
+a:visited {
+  color: hsl(75, 100%, 40%);
+}
+
+h1 {
+  background: black;
+  color: white;
+  margin-bottom: 0px;
+  padding: 6px 18px;
+  font-size: 1em;
+}
+h3 {
+  font-size: 1.6em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: Spectral, "Arial Black", sans-serif;
+}
+h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+h5 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+#name {
+  font-size: 2.8em;
+  font-weight: 900;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 100%;
+  font-family: Spectral, "Arial Black", sans-serif;
+}
+
+#jobTitle {
+  font-size: 1em;
+  font-weight: 400;
+  font-family: Rubik;
+}
+
+/*CREATES A CONTAINER FOR THE TWO COLUMNS */
+.flex-container {
+  display: flex;
+}
+
+/* STYLING FOR THE LEFT COLUMN */
+/*sets the properties of the left column */
+#left {
+  width: 30%;
+  box-sizing: border-box;
+  background: rgb(130, 214, 217);
+  text-align: center;
+}
+
+/*box with Contact details in the left column*/
+div div div {
+  position: relative;
+  border: 2px hsl(0, 0%, 0%) solid;
+  box-sizing: border-box;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 55px;
+  margin-bottom: 30px;
+  min-height: 250px;
+  padding-bottom: 4%;
+  z-index: 0;
+}
+
+/*header which overlaps the border; includes Contact details */
+div div div h3 {
+  position: absolute;
+  top: -8%;
+  right: 20%;
+  left: 20%;
+  z-index: 1;
+  text-align: center;
+  background: cadetblue;
+}
+
+div div div h4 {
+  margin-top: 10%;
+}
+div div div p {
+  margin-top: 2%;
+  font-size: 1em;
+}
+
+/*sets the properties of the right column */
+#right {
+  width: 70%;
+  box-sizing: border-box;
+  padding: 50px 5%;
+  margin: 0;
+  background: cadetblue;
+}
+
+/*styling for the image */
+img {
+  width: 33%;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 65%;
+  border: 2px forestgreen solid;
+}
+
+/* end of styling for the images */
+
+/*styling for <hr> - horizontal lines  */
+/*basic lines, all sections, both columns */
+hr {
+  display: block;
+  background-color: black;
+  text-align: center;
+}
+/* short line under the 'marketing manager' in the left column */
+#mainHR {
+  width: 30%;
+  border: 2px solid black;
+  margin-top: 20px;
+  margin: auto;
+}
+#justified {
+  text-align: justify;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 50px;
+  border: 2px black solid;
+}
+.funky {
+  transition: color 1s, font-size 2s;
+}
+.funky:hover {
+  color: wheat;
+  font-size: 1.2em;
+}
+.hard:hover {
+  color: wheat;
+  font-size: 1.2em;
+}
+.hard {
+  transition: color 1s, font-size 2s;
+}
+.soft {
+  transition: color 1s, font-size 2s;
+}
+.soft:hover {
+  color: wheat;
+  font-size: 1.2em;
+}
+.Lan-s {
+  transition: color 1s, font-size 2s;
+}
+.Lan-s:hover {
+  color: wheat;
+  font-size: 1.2em;
+}
+.navbar {
+  background: cadetblue;
+  display: flex;
+}
+.btn__search {
+  width: 10%;
+  background: cadetblue;
+}
+
+.search {
+  width: 20%;
+  background: rgb(130, 214, 217);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-reflect: below 0 linear-gradient(transparent, transparent, #0005);
+}
+
+.box .loader {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: animateLoading 2s linear infinite;
+}
+
+.box .loader:nth-child(2),
+.box .loader:nth-child(4) {
+  animation-delay: -1s;
+  filter: hue-rotate(290deg);
+}
+
+@keyframes animateLoading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.box .loader:nth-child(1)::before,
+.box .loader:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to top, transparent, rgba(0, 255, 249, 0.5));
+  background-size: 100px 180px;
+  background-repeat: no-repeat;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+.container .loader i {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: #00fff9;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00fff9, 0 0 20px #00fff9, 0 0 30px #00fff9,
+    0 0 40px #00fff9, 0 0 50px #00fff9, 0 0 60px #00fff9, 0 0 70px #00fff9,
+    0 0 80px #00fff9, 0 0 90px #00fff9, 0 0 100px #00fff9;
+  z-index: 10;
+}
+
+.box .loader span {
+  position: absolute;
+  inset: 20px;
+  background: #000;
+  border-radius: 50%;
+  z-index: 1;
+}
+footer {
+  margin-top: 25%;
+}
